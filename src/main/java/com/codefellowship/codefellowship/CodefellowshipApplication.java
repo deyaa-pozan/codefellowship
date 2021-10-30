@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 
 @SpringBootApplication
 public class CodefellowshipApplication {
+
 	public static void main(String[] args) {
 		SpringApplication.run(CodefellowshipApplication.class, args);
 	}
