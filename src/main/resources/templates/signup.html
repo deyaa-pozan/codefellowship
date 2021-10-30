@@ -1,21 +1,35 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="https://www.thymeleaf.org" lang="en">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up Page</title>
-    <link th:href="@{style.css}" rel="stylesheet" />
-
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-<form method="post" th:action="@{/signup}">
-    <div><label for="username">Username : <input id="username" name="username" type="text"></label></div>
-    <div><label for="password">Password : <input id="password" name="password" type="password"></label></div>
-    <div><label for="firstName">firstName : <input id="firstName" name="firstName" type="text"></label></div>
-    <div><label for="lastName">lastName : <input id="lastName" name="lastName" type="text"></label></div>
-    <div><label for="dateOfBirth">dateOfBirth : <input id="dateOfBirth" name="dateOfBirth" type="date"></label></div>
-    <div><label for="bio">bio : <input id="bio" name="bio" type="text"></label></div>
-    <div><input type="submit" value="Submit"/></div>
+
+<form method="POST" action="/signup">
+    <label for="username">User name: </label>
+    <input id="username" name="username" type="text">
+    <br>
+    <label for="password">password: </label>
+    <input id="password" name="password" type="text">
+    <br>
+    <label for="firstName">First Name: </label>
+    <input id="firstName" name="firstName" type="text">
+    <br>
+    <label for="lastName">Last Name: </label>
+    <input id="lastName" name="lastName" type="text">
+    <br>
+    <label for="dateOfBirth">Date Of Birth: </label>
+    <input id="dateOfBirth" name="dateOfBirth" type="datetime-local">
+    <br>
+    <label for="bio">Bio: </label>
+    <input id="bio" name="bio" type="text">
+    <br>
+    <button type="submit">Register</button>
 </form>
+
 </body>
 </html>
