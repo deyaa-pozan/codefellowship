@@ -16,15 +16,14 @@ public class Post {
     @ManyToOne
     ApplicationUser user;
 
+    public Post() {
+    }
+
     public Post(String body, ApplicationUser user) {
         this.body = body;
         this.createdAt = createdAt;
         this.user = user;
     }
-    public Post() {
-    }
-
-
 
     public String getBody() {
         return body;

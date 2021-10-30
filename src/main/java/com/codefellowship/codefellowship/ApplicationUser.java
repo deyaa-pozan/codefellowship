@@ -54,7 +54,6 @@ public class ApplicationUser implements UserDetails {
         this.dateOfBirth = dateOfBirth;
         this.bio = bio;
     }
-
     public Set<ApplicationUser> getUsers() {
         return users;
     }

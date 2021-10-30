@@ -21,7 +21,6 @@ public class ApplicationUserController {
     @Autowired
     ApplicationUserRepository applicationUserRepository;
 
-
     @Autowired
     PasswordEncoder passwordEncoder;
 
@@ -32,7 +31,7 @@ public class ApplicationUserController {
 
 
     @PostMapping("/signup")
-    public RedirectView signupPost(String username,
+    public RedirectView signup(String username,
                                String password,
                                String firstName,
                                String lastName,
@@ -46,10 +45,12 @@ public class ApplicationUserController {
         return new RedirectView("/login");
     }
 
+
     @GetMapping("/login")
     public String getLogin(){
         return "login";
     }
+
 
     @GetMapping("/users/{id}")
     public String getUser(Principal p,Model m, @PathVariable long id){
@@ -58,6 +59,7 @@ public class ApplicationUserController {
             ApplicationUser currentUser = applicationUserRepository.findByUsername(username);
             ApplicationUser user = applicationUserRepository.findById(id).get();
             System.out.println(currentUser.getUsers());
+            // if followed see the button as un follow..
             boolean isFollowed = currentUser.isFollowedUser(user);
             boolean isSameUser = false;
             if(username.equals(user.getUsername()))
